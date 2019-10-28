@@ -18,6 +18,10 @@ set wildmenu wildmode=list:longest,full " コマンドラインモードでTAB�
 highlight Visual ctermfg=black ctermbg=gray
 highlight StatusLine ctermfg=black ctermbg=white
 highlight Comment ctermfg=gray
+highlight DiffAdd    ctermfg=33 ctermbg=236
+highlight DiffChange ctermfg=white ctermbg=236
+highlight DiffDelete ctermfg=darkred ctermbg=236
+highlight DiffText   ctermfg=green ctermbg=236
 "let loaded_matchparen = 1 " 括弧の対応非表示
 
 
