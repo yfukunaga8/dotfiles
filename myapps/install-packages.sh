@@ -10,6 +10,8 @@ sudo apt -y install \
     autossh sshfs \
     fcitx-mozc \
     copyq \
+    zazu \
+    simplescreenrecorder \
     # python3-venv \
     # hyperspec \
     # ansible sshpass \
