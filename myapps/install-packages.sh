@@ -9,6 +9,7 @@ sudo apt -y install \
     curl wget nmap tcpdump iperf \
     autossh sshfs \
     fcitx-mozc \
+    copyq \
     # python3-venv \
     # hyperspec \
     # ansible sshpass \
