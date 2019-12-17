@@ -2,14 +2,12 @@
 sudo apt update
 sudo apt -y install \
     software-properties-common \
-    firmware-iwlwifi \
     build-essential \
     git tig \
     clang lldb cmake \
     curl wget nmap tcpdump iperf \
     autossh sshfs \
     fcitx-mozc \
-    copyq \
     zazu \
     simplescreenrecorder \
     # python3-venv \
@@ -19,7 +17,7 @@ sudo apt -y install \
     # blueman pulseaudio-module-bluetooth bluez bluetooth bluez-firmware
 sudo apt -y full-upgrade
 
-if 0
+if test 0; then
   wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
   sudo dpkg -i google-chrome*.deb
   sudo apt --fix-broken install
