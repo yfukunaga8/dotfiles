@@ -31,11 +31,11 @@ fi
 #
 # git-completion.bash / git-prompt.sh
 #
-if [ -f $HOME/dotfiles/apps/git-bash-prompt/git-prompt.sh ]; then
-    source $HOME/dotfiles/apps/git-bash-prompt/git-prompt.sh
+if [ -f $HOME/dotfiles/myapps/git-bash-prompt/git-prompt.sh ]; then
+    source $HOME/dotfiles/myapps/git-bash-prompt/git-prompt.sh
 fi
-if [ -f $HOME/dotfiles/apps/git-bash-prompt/git-completion.bash ]; then
-    source $HOME/dotfiles//apps/git-bash-prompt/git-completion.bash
+if [ -f $HOME/dotfiles/myapps/git-bash-prompt/git-completion.bash ]; then
+    source $HOME/dotfiles/myapps/git-bash-prompt/git-completion.bash
 fi
 GIT_PS1_SHOWDIRTYSTATE=true
 GIT_PS1_SHOWUNTRACKEDFILES=true
