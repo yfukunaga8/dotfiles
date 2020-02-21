@@ -67,7 +67,9 @@ if [ "$color_prompt" = yes ]; then
     GREEN='\[\e[32m\]'
     UNSET='\[\e[0m\]'
     CYAN='\[\e[36m\]'
+    GRAY='\[\e[40m\]'
     PS1="${debian_chroot:+($debian_chroot)}\n\u$CYAN@\h$UNSET [\w]\$(__git_ps1)\n\$ "
+    #PS1="${debian_chroot:+($debian_chroot)}$GRAY[\w]\$(__git_ps1)$UNSET\n\u$CYAN@\h$UNSET \$ "
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
