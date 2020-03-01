@@ -64,3 +64,4 @@ set hlsearch    " highlight search
 highlight Search cterm=NONE ctermfg=black ctermbg=yellow
 set wrapscan
 
+set belloff=all
