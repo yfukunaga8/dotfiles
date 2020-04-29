@@ -124,6 +124,7 @@ export EDITOR=vim
 # Add PATH
 export INITPATH=$PATH
 export PATH=$PATH:$HOME/dotfiles/myapps:/usr/local/bin/
+export PATH=$PATH:$HOME/.roswell/bin/
 export PATH=`echo $PATH | tr ':' '\n' | sort -u | paste -d: -s -`;
 
 if [ -f /etc/bash_completion ]; then

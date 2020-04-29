@@ -18,6 +18,8 @@ endif
 
 call plug#begin(expand('~/.vim/plugged'))
     " Add plugins
+    Plug 'vlime/vlime'
+    Plug 'vim-scripts/paredit.vim'
 call plug#end()
 
 
@@ -26,6 +28,8 @@ call plug#end()
 " ============================================================================
 source ~/.vim/rc/keymap-rc.vim
 source ~/.vim/rc/appearance-rc.vim
+source ~/.vim/rc/vlime.vim
+source ~/.vim/rc/paredit.vim
  
 set clipboard=unnamed
 
