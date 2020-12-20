@@ -1,0 +1,51 @@
+# sssh.sh completion                                        -*- shell-script -*-
+
+# Search COMP_WORDS for '-F configfile' or '-Fconfigfile' argument
+_ssh_configfile()
+{
+    set -- "${words[@]}"
+    while [[ $# -gt 0 ]]; do
+        if [[ $1 == -F* ]]; then
+            if [[ ${#1} -gt 2 ]]; then
+                configfile="$(dequote "${1:2}")"
+            else
+                shift
+                [[ $1 ]] && configfile="$(dequote "$1")"
+            fi
+            break
+        fi
+        shift
+    done
+}
+
+_sssh.sh()
+{
+    local cur prev words cword
+    _init_completion -n : || return
+
+    local -a config
+
+    local configfile
+    _ssh_configfile
+
+    case $prev in
+        -J)
+            _known_hosts_real -a -F "$configfile" -- "$cur"
+            return
+            ;;
+    esac
+
+    if [[ "$cur" == -F* ]]; then
+        cur=${cur#-F}
+        _filedir
+        # Prefix completions with '-F'
+        COMPREPLY=( "${COMPREPLY[@]/#/-F}" )
+        cur=-F$cur  # Restore cur
+    elif [[ "$cur" == -* ]]; then
+        COMPREPLY=( $( compgen -W '$( _parse_usage "$1" )' -- "$cur" ) )
+    else
+        _known_hosts_real $ipvx -a -F "$configfile" -- "$cur"
+    fi
+} &&
+shopt -u hostcomplete && complete -F _sssh.sh sssh.sh slogin autossh sidedoor
+
