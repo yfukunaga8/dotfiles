@@ -1,4 +1,4 @@
-# sssh.sh completion                                        -*- shell-script -*-
+# s completion                                        -*- shell-script -*-
 
 # Search COMP_WORDS for '-F configfile' or '-Fconfigfile' argument
 _ssh_configfile()
@@ -18,7 +18,7 @@ _ssh_configfile()
     done
 }
 
-_sssh.sh()
+_s()
 {
     local cur prev words cword
     _init_completion -n : || return
@@ -47,5 +47,5 @@ _sssh.sh()
         _known_hosts_real $ipvx -a -F "$configfile" -- "$cur"
     fi
 } &&
-shopt -u hostcomplete && complete -F _sssh.sh sssh.sh slogin autossh sidedoor
+shopt -u hostcomplete && complete -F _s s slogin autossh sidedoor
 
